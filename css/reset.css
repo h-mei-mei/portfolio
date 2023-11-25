@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* reset */
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+	box-sizing: border-box;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+img{
+	width: 100%;
+}
+
