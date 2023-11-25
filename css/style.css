@@ -8,18 +8,6 @@
 }
 
 @font-face {
- 	font-family: "Tsukimi Rounded";
- 	src: url("../font/TsukimiRounded-SemiBold.ttf") format("truetype");
-	font-weight: normal;
-    font-style: normal;
-}
-@font-face {
- 	font-family: "Tsukimi Rounded";
- 	src: url("../font/TsukimiRounded-Bold.ttf") format("truetype");
-	font-weight: bold;
-    font-style: normal;
-}
-@font-face {
  	font-family: "MPLUSRounded1c";
  	src: url("../font/MPLUSRounded1c-Bold.ttf") format("truetype");
 	font-weight: normal;
@@ -28,7 +16,7 @@
 
 body{
 	letter-spacing: 1px;
-	font-family: 'Tsukimi Rounded', sans-serif;
+	font-family: 'MPLUSRounded1c', sans-serif;
 	color: var(--dark);
 }
 
@@ -36,11 +24,7 @@ section{
 	padding-bottom: 100px;
 }
 section:first-child{
-	padding-top: 60px;
-}
-
-p {
-	font-family: "MPLUSRounded1c", sans-serif;
+	padding-top: 100px;
 }
 
 .line-marker{

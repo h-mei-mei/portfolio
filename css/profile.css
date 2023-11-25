@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+#skills .skills-item{
+	border: 5px solid var(--main-color);
+	border-radius: 30px;
+	padding: 20px;
+	height: 100%;
+}
+
+#skills .skill-others li{
+	list-style-type: disc;
+}
