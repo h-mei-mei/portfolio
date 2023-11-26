@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+#website .row .img img{
+	object-fit: cover;
+	border: 5px solid var(--main-color);
+	border-radius: 30px;
+	max-height: 500px;
+	object-position: top;
+}
