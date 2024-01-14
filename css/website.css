@@ -1,12 +1,31 @@
 @charset "utf-8";
 /* CSS Document */
 
-#website .row .img img{
+
+#website .website-box{
+	display:flex;
+	margin-bottom: 80px;
+}
+
+#website .img{
+	width: 50%;
+}
+#website .text{
+	width: 50%;
+	font-size: 2.4rem;
+	padding: 0 20px;
+}
+#website .text p{
+	margin-bottom: 20px;
+}
+
+#website .img img{
 	object-fit: cover;
 	border: 5px solid var(--main-color);
 	border-radius: 30px;
 	max-height: 500px;
 	object-position: top;
+	border: 5px solid var(--pink);
 }
 
 .btn {
@@ -18,8 +37,8 @@
 	max-width: 500px;
 	height: 50px;
 	position: relative;
-	background: var(--main-color);
-	border: 3px solid var(--main-color);
+	background: #242424;
+	border: 3px solid #fff;
 	border-radius: 30px;
 	color: #fff;
 	font-size: 16px;
@@ -45,11 +64,26 @@
 
 
 .btn:hover {
-	color: var(--main-color);
+	color: #242424;
 	background-color: #fff;
-	border: 3px solid var(--main-color);
+	border: 3px solid #242424;
 }
 .btn:hover::after {
-	border-top: 2px solid var(--main-color);
-	border-right: 2px solid var(--main-color);
+	border-top: 2px solid #242424;
+	border-right: 2px solid #242424;
+}
+
+@media screen and (max-width: 750px){
+	#website .website-box{
+		flex-direction: column;
+	}
+
+	#website .img{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#website .text{
+		width: 100%;
+		padding: 0;
+	}
 }

@@ -1,13 +1,67 @@
 @charset "utf-8";
 /* CSS Document */
 
-#skills .skills-item{
-	border: 5px solid var(--main-color);
-	border-radius: 30px;
-	padding: 20px;
-	height: 100%;
+#profile .profile-box{
+	display: flex;
+}
+#profile .profile-item{
+	width: 50%;
+	padding: 10px;
+}
+#profile p{
+	margin-bottom: 20px;
+	font-size: 2.4rem;
 }
 
-#skills .skill-others li{
+
+#skills .skills-box{
+	display: flex;
+	flex-wrap: wrap;
+}
+#skills .skills-item{
+	width: 50%;
+	padding: 10px;
+}
+#skills .skills-inner{
+	padding: 20px;
+	height: 100%;
+	border: 5px solid var(--pink);
+	border-radius: 20px;
+	display: flex;
+}
+#skills .skills-inner .img{
+	width: 20%;
+	padding-right: 10px;
+}
+#skills .skills-inner .text{
+	width: 80%;
+	font-size: 2.0rem;
+}
+#skills .skills-inner .text .skill-title{
+	font-size: 3.2rem;
+	margin-bottom: 20px;
+}
+
+#skills .skills-inner .text ul li{
 	list-style-type: disc;
+	margin-left: 1em;
+}
+
+@media screen and (max-width: 750px){
+	#profile .profile-box{
+		flex-direction: column;
+	}
+	#profile .profile-item{
+		width: 100%;
+	}
+	
+	#skills .skills-box{
+		flex-direction: column;
+	}
+	#skills .skills-item{
+		width: 100%;
+	}
+	#skills .skills-inner .text .skill-title{
+		font-size: 2.4rem;
+	}
 }
