@@ -1,19 +1,18 @@
 <!doctype html>
-<html lang="ja"><!-- InstanceBegin template="/Templates/テンプレート.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="ja"><!-- InstanceBegin template="C:\Users\hsmtm\OneDrive\デスクトップ\コーディング練習\portfolio\Templates\テンプレート.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- InstanceBeginEditable name="doctitle" -->
-	<title>Mei</title>
-	<meta name="description" content="イラストレーターMeiのサイトです。みたひとたちがふわふわなきもちになる作品をつくることがわたしの目標です">
+	<title>Blog | Mei</title>
+	<meta name="description" content="イラストレーターMeiのサイトです。">
 	<!-- InstanceEndEditable -->
 	<link rel="icon" href="./img/favicon.ico">
 	<link href="css/reset.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<script src="js/jquery-3.7.1.min.js"></script>
 	<!-- InstanceBeginEditable name="head" -->
-
-	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<link href="css/blog.css" rel="stylesheet" type="text/css">
 	<!-- InstanceEndEditable -->
 </head>
 <body>
@@ -33,7 +32,6 @@
 				<ul class="global-navigation__list">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="profile.html">Profile</a></li>
-					<li><a href="blog.html">Blog</a></li>
 					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="web.html">WebSite</a></li>
 				</ul>
@@ -44,34 +42,35 @@
 	
 	<main>
 		<!-- InstanceBeginEditable name="main" -->
-		<section id="mainvisual">
+		<section id="blog">
 			<div class="wrap">
-				<img src="img/mainvisual1.png" alt="メインビジュアル１"></li>
-			</div>
-		</section>
-		
-		<section id="goal">
-			<div class="wrap">
-				<p>みたひとたちが<br>ふわふわなきもちになる<br>作品をつくることが<br>わたしの目標です</p>
-			</div>
-		</section>
-		
-		<section id="gallery">
-			<div class="wrap">
-				<ul>
-					<li>
-						<img src="img/gallary1.PNG" alt="花嫁と花婿">
-					</li>
-					<li>
-						<img src="img/gallary2.PNG" alt="女の子">
-					</li>
-					<li>
-						<img src="img/gallary3.PNG" alt="冬服と犬">
-					</li>
-					<li>
-						<img src="img/gallary4.PNG" alt="お風呂">
-					</li>
-				</div>
+				<h2 class="sec-title">Blog</h2>
+				
+				<article class="blog-box">
+					<h3>ヘッダーのボタンを改良しました</h3>
+					<p class="date">2024.3.22</p>
+					<div class="text">
+						<p>このサイトの画面右上にあるダークモードボタンとハンバーガーボタンを改良しました。キーボードでの操作が可能になりました。</p>
+						<p>
+							【参考にしたサイト】<br>
+							<a href="https://baigie.me/engineerblog/definitive-hamburger-menu/" target="_blank">【2024年】ハンバーガーメニューの作り方決定版【コピペ可能】</a>
+						</p>
+						
+					</div>
+				</article>
+				
+				<article class="blog-box">
+					<h3>初めてイラレでお絵描きしました</h3>
+					<p class="date">2024.3.22</p>
+					<div class="text">
+						<div class="img"><img src="img/blog/2024-03-22-1.png" alt="女の子"></div>
+						<p>Adobe Illustratorを使用してお絵描きをしました。初めてにしては可愛くできたと思います。</p>
+						<p>
+							【参考にしたサイト】<br>
+							<a href="https://www.alta.co.jp/blog/post-7926/" target="_blank">【Illustrator】イラレでも左右対称描画ができるって知ってた？</a>
+						</p>
+					</div>
+				</article>
 			</div>
 		</section>
 		<!-- InstanceEndEditable -->
@@ -84,9 +83,6 @@
 			</li>
 			<li>
 				<a href="profile.html">Profile</a>
-			</li>
-			<li>
-				<a href="blog.html">Blog</a>
 			</li>
 			<li>
 				<a href="gallery.html">Gallery</a>
