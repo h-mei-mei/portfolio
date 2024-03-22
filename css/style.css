@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 
+
 /* color */
 body {
 	--light: #fff;
@@ -36,10 +37,13 @@ section{
 
 
 .sec-title{
-	font-size: 3.2rem;
+	font-size: 3.6rem;
 	text-align: center;
 	margin-bottom: 40px;
 }
+
+
+
 .sec-title span{
 	padding: 0 20px;
 }
@@ -52,21 +56,18 @@ section{
 /******************************************************/
 /*header*/
 /******************************************************/
-#header{
+#header .header-wrap{
 	width: 100%;
 	height: 80px;
 	padding: 10px;
-	z-index: 1000;
-	position: fixed;
-	top:0;
-	left:0;
-	background-color: var(--light);
-}
-#header .header-wrap{
-	height: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 1000;
+	background-color: var(--light);
+	position: fixed;
+	top:0;
+	left:0;
 }
 
 #header .site-title{
@@ -91,24 +92,11 @@ section{
 	margin-left: 20px;
 }
 
-nav ul {
-	display: flex;
-}
-nav ul li{
-	margin-left: 20px;
-}
-nav ul li:hover{
-	text-decoration: underline;
-}
-
 #darkmode{
 	position: relative;
-	background: #242424;
 	cursor: pointer;
     width: 54px;
-    height:54px;
-	border: 2px solid #fff;
-	border-radius: 5px;
+    height: 54px;
 	background-image:url("../img/moon.svg");
 	background-size: 30px 30px;
 	background-position: center;
@@ -119,82 +107,84 @@ nav ul li:hover{
 	background-image:url("../img/sun.svg");
 }
 
-#header .openbtn{
-	position: relative;
-	background: #242424;
-	cursor: pointer;
+
+
+#header .hamburger {
+    display: block;
+    height: 60px;
+    position: relative;
     width: 54px;
     height:54px;
-	border: 2px solid #fff;
-	border-radius: 5px;
-	display: none;
+	cursor: pointer;
 }
-
-/*ボタン内側*/
-#header .openbtn span{
-    display: inline-block;
-    transition: all .3s;
-    position: absolute;
-    left: 14px;
+#header .hamburger__line {
+    display: block;
     height: 3px;
+    position: absolute;
     border-radius: 2px;
-	background: #fff;
-  	width: 45%;
-  }
-
-#header .openbtn span:nth-of-type(1) {
-	top:15px;	
+    top: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    background-color: var(--dark);
+    transition: 0.3s;
 }
-
-#header .openbtn span:nth-of-type(2) {
-	top:23px;
+#header .hamburger__line:before,
+#header .hamburger__line:after {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: var(--dark);
+    transition: inherit;
 }
-
-#header .openbtn span:nth-of-type(3) {
-	top:31px;
+#header .hamburger__line:before {
+    top: -8px;
 }
-
-/*activeクラスが付与されると線が回転して×に*/
-
-#header .openbtn.active span:nth-of-type(1) {
-    top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
+#header .hamburger__line:after {
+    top: 8px;
 }
-
-#header .openbtn.active span:nth-of-type(2) {
-	opacity: 0;/*真ん中の線は透過*/
+#header .hamburger.-active .hamburger__line {
+    background-color: transparent;
 }
-
-#header .openbtn.active span:nth-of-type(3){
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
+#header .hamburger.-active .hamburger__line::before {
+    top: 0;
+    transform: rotate(45deg);
 }
-
-#header ul.sp-menu{
-	position: absolute;
-	top: 80px;
-	left: 0;
-	width: 100%;
+#header .hamburger.-active .hamburger__line::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#header .header__nav-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 100vh;
+	z-index: 999;
+    visibility: hidden;
+	background-color: rgba(0,0,0,0.8);
+    transition: 0.3s;
+}
+#header .header__nav-area.-active {
+	visibility: visible;
+}
+#header ul.global-navigation__list{
 	background-color: var(--light);
-	transform: scaleY(0);
-	transform-origin: top center;
-	transition: all 0.3s;
+	padding: 90px 10px 20px;
 }
-#header ul.sp-menu li{
-	padding: 20px;
+
+#header ul.global-navigation__list li a{
+	display: block;
 	text-align: center;
+	width: 100%;
+	padding: 30px;
+	font-size: 2.4rem;
 }
-#header ul.sp-menu li:hover{
+#header ul.global-navigation__list li a:hover{
 	text-decoration: underline;
 }
-#header ul.sp-menu.active{
-	transform: scaleY(1);
-}
-
 
 
 /******************************************************/
@@ -296,12 +286,7 @@ body.dark #footer{
 /*smartphone*/
 /******************************************************/
 @media screen and (max-width: 750px){
-	nav{
-		display: none;
-	}
-	#header .openbtn{
-		display: block;
-	}
+
 }
 
 

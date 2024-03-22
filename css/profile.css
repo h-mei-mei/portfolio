@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+
+#profile{
+	padding-top: 80px;
+}
 #profile .profile-box{
 	display: flex;
 }
@@ -27,22 +32,17 @@
 	height: 100%;
 	border: 5px solid var(--pink);
 	border-radius: 20px;
-	display: flex;
+	font-size: 2.4rem;
 }
 #skills .skills-inner .img{
-	width: 20%;
-	padding-right: 10px;
+	width: 50px;
+	margin: 0 auto 20px;
 }
-#skills .skills-inner .text{
-	width: 80%;
-	font-size: 2.0rem;
-}
-#skills .skills-inner .text .skill-title{
-	font-size: 3.2rem;
+#skills .skills-inner .skills-title{
+	text-align: center;
 	margin-bottom: 20px;
 }
-
-#skills .skills-inner .text ul li{
+#skills .skills-inner ul li{
 	list-style-type: disc;
 	margin-left: 1em;
 }

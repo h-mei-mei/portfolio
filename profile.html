@@ -21,40 +21,23 @@
 		<div class="header-wrap">
 			<h1 class="site-title"><a href="index.html"><img src="img/icon.png" alt="ハート">Mei</a></h1>
 			<div class="header-box">
-				<nav class="header-item">
-					<ul>
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="profile.html">Profile</a>
-						</li>
-						<li>
-							<a href="gallery.html">gallery</a>
-						</li>
-						<li>
-							<a href="web.html">WebSite</a>
-						</li>
-					</ul>
-				</nav>
-				<div id="darkmode" class="header-item"></div>
-				<div class="openbtn header-item"><span></span><span></span><span></span></div>
+				<button id="darkmode" class="header-item" aria-label="ダークモード"></button>
+				<button id="js-hamburger" type="button" class="hamburger header-item" aria-controls="navigation" aria-expanded="false" aria-label="メニューを開く">
+					<span class="hamburger__line"></span>
+				</button>
 			</div>
 		</div>
-		<ul class="sp-menu">
-			<li>
-				<a href="index.html">Home</a>
-			</li>
-			<li>
-				<a href="profile.html">Profile</a>
-			</li>
-			<li>
-				<a href="gallery.html">gallery</a>
-			</li>
-			<li>
-				<a href="web.html">WebSite</a>
-			</li>
-		</ul>
+		<div class="header__nav-area js-nav-area" id="navigation">
+			<nav id="js-global-navigation" class="global-navigation">
+				<ul class="global-navigation__list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="profile.html">Profile</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="web.html">WebSite</a></li>
+				</ul>
+				<div id="js-focus-trap" tabindex="0"></div>
+			</nav>
+		</div>
     </header>
 	
 	<main>
@@ -71,7 +54,7 @@
 							関西出身、関西在住。
 						</p>
 						<p>
-							幼稚園児の時からおえかきがすき。高校生の時はじめてJavaScriptにであい、パソコンが好きになる。大学では情報科学を専攻し、C、Java、Pythonなどを学習する。サークル活動ではゲームを作成したりなどする。社会人になってからは趣味の範囲でWebページ作成の勉強をマイペースに続けている。
+							幼稚園児の時からおえかきがすき。高校生の時はじめてJavaScriptに出会う。大学では情報科学を専攻。社会人になってからは趣味の範囲でWebページ作成の勉強をマイペースに続けている。
 						</p>
 						<p>
 							好きな食べ物はアボカド。
@@ -90,47 +73,37 @@
 				<ul class="skills-box">
 					<li class="skills-item">
 						<div class="skills-inner">
-							<div class="img"><img src="img/icon-illust.png" alt="イラストアイコン"></div>
-							<div class="text">
-								<p class="skill-title">イラスト制作</p>
-								<p>低頭身のかわいい女の子・男の子のイラストを描きます。iphoneの無料アプリ「メディバンペイント」を使用して描いています。</p>
-								<p>illustratorの使用も練習中です。</p>
-							</div>
+							<div class="img"><img src="img/icon-illust.png" alt="イラストのアイコン"></div>
+							<p class="skills-title">イラスト制作</p>
+							<p>低頭身のかわいい女の子・男の子のイラストを描きます。iphoneの無料アプリ「メディバンペイント」を使用して描いています。illustratorの使用も練習中です。</p>
 						</div>
 					</li>
 					<li class="skills-item">
 						<div class="skills-inner">
-							<div class="img"><img src="img/icon-web.png" alt="イラストアイコン"></div>
-							<div class="text">
-								<p class="skill-title">Webサイト制作</p>
-								<p>HTMLおよびCSSを使用してホームページを作成します。jQueryを使用し、サイトに簡単な動きをつけることができます。レスポンシブ対応が可能です。</p>
-							</div>
+							<div class="img"><img src="img/icon-web.png" alt="webページのアイコン"></div>
+							<p class="skills-title">Webサイト制作</p>
+							<p>HTMLおよびCSSを使用してホームページを作成します。jQueryを使用し、サイトに簡単な動きをつけることができます。レスポンシブ対応が可能です。</p>
 						</div>
 					</li>
 					<li class="skills-item">
 						<div class="skills-inner">
 							<div class="img"><img src="img/icon-pc.png" alt="イラストアイコン"></div>
-							<div class="text">
-								<p class="skill-title">Officeソフト</p>
-									<p>Word、Excel、PowerPointの基本的な操作を行うことができます。
-									<p>Wordは、目次や索引の制作を行うことができます。タイピング速度には自信があります。</p>
-									<p>Excelは、簡単な関数やデータ入力規則の設定、簡単なVBAのコードを記述することができます。</p>
-							</div>
+								<p class="skills-title">Officeソフト</p>
+								<p>Word、Excel、PowerPointの基本的な操作を行うことができます。Wordは、目次や索引の制作を行うことができます。Excelは、簡単な関数やデータ入力規則の設定、簡単なVBAのコードを記述することができます。</p>
 						</div>
 					</li>
 					<li class="skills-item">
 						<div class="skills-inner">
 							<div class="img"><img src="img/icon-paper.png" alt="イラストアイコン"></div>
-							<div class="text">
-								<p class="skill-title">資格</p>
-								<ul class="skill-others fs-4">
-									<li>セキュリティマネジメント試験（2019）</li>
-									<li>基本情報技術者試験（2020）</li>
-									<li>MOS Excel・Word　Expert 2019（2022）</li>
-									<li>個人情報保護士（2023）</li>
-									<li>webデザイン技能検定3級（2023）</li>
-								</ul>
-							</div>
+							<p class="skills-title">資格</p>
+							<ul class="skill-others fs-4">
+								<li>セキュリティマネジメント試験（2019）</li>
+								<li>基本情報技術者試験（2020）</li>
+								<li>MOS Excel Expert 2019（2022）</li>
+								<li>MOS Word Expert 2019（2022）</li>
+								<li>個人情報保護士（2023）</li>
+								<li>webデザイン技能検定3級（2023）</li>
+							</ul>
 						</div>
 					</li>
 				</ul>
@@ -151,7 +124,7 @@
 				<a href="profile.html">Profile</a>
 			</li>
 			<li>
-				<a href="gallery.html">gallery</a>
+				<a href="gallery.html">Gallery</a>
 			</li>
 			<li>
 				<a href="web.html">WebSite</a>

@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+#website{
+	padding-top: 80px;
+}
 
 #website .website-box{
 	display:flex;
