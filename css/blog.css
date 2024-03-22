@@ -7,6 +7,9 @@
 #blog h3{
 	font-size: 3.2rem;
 }
+#blog .date{
+	margin-top : 20px;
+}
 #blog .text .img {
 	margin-top : 20px;
 }
