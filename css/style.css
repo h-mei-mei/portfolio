@@ -165,10 +165,12 @@ section{
 	z-index: 999;
     visibility: hidden;
 	background-color: rgba(0,0,0,0.8);
+	opacity: 0;
     transition: 0.3s;
 }
 #header .header__nav-area.-active {
 	visibility: visible;
+	opacity: 1;
 }
 #header ul.global-navigation__list{
 	background-color: var(--light);
