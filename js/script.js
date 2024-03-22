@@ -21,16 +21,6 @@ $('#darkmode').click(function() {
 	}
 })
 
-//ハンバーガーメニュー
-$(".openbtn").click(function () {
-    $(this).toggleClass('active');
-	$(".sp-menu").toggleClass('active');
-});
-$(window).resize(function(){
-  	// 画面幅が変更されたときに実行
-	$(".openbtn").removeClass('active');
-	$(".sp-menu").removeClass('active');
-});
 
 //サイトを訪れた時のローディング画面
 $(function () {
@@ -101,6 +91,7 @@ let flg = false;
 let accordionFlg = false;
 
 let hamburger = document.getElementById("js-hamburger");
+let sitetitle = document.getElementById("site-title");
 let focusTrap = document.getElementById("js-focus-trap");
 let menu = document.querySelector(".js-nav-area");
 let accordionTrigger = document.querySelectorAll(".js-sp-accordion-trigger");
@@ -134,6 +125,7 @@ window.addEventListener("keydown", () => {　//escキー押下でメニューを
 });
 
 // フォーカストラップ制御
+//この要素にフォーカスが当たった際に、メニューボタンか先頭項目にフォーカスを当てるようにJSで制御。
 focusTrap.addEventListener("focus", (e) => {
-  hamburger.focus();
+  sitetitle.focus();
 });
